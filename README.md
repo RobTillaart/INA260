@@ -16,7 +16,10 @@ Arduino library for the INA260 power sensor.
 
 ## Description
 
-**Experimental** library for the INA260 power sensor.
+**Experimental** 
+
+Arduino library for the INA260 power sensor.  
+This library is based upon the INA226 library however the INA260 is slightly simpler.
 
 Not all functionality is tested / investigated.
 
@@ -46,6 +49,9 @@ Indicative table
 |   55   |    1.0    |
 |   50   |    2.0    |
 |   40   |    5.0    |
+
+
+Feedback as always, is welcome.
 
 
 ### Special characters
