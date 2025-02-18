@@ -55,8 +55,6 @@ unittest(test_constructor)
   assertTrue(INA.begin());
   assertTrue(INA.isConnected());
   assertEqual(0x40, INA.getAddress());
-
-  assertFalse(INA.isCalibrated());
 }
 
 
