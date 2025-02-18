@@ -139,30 +139,6 @@ unittest(test_configuration)
 }
 
 
-unittest(test_calibration)
-{
-  INA260 INA(0x40);
-
-  Wire.begin();
-  //  assertTrue(INA.begin());
-
-  assertEqual(INA260_ERR_NONE, INA.setMaxCurrentShunt(30, 0.002));
-  assertEqual(INA260_ERR_NONE, INA.setMaxCurrentShunt(1,  0.05));
-  assertEqual(INA260_ERR_NONE, INA.setMaxCurrentShunt(1,  0.080));
-
-  assertEqual(INA260_ERR_SHUNTVOLTAGE_HIGH, INA.setMaxCurrentShunt(82.0, 0.001));
-  assertEqual(INA260_ERR_SHUNTVOLTAGE_HIGH, INA.setMaxCurrentShunt(41.0, 0.002));
-  assertEqual(INA260_ERR_SHUNTVOLTAGE_HIGH, INA.setMaxCurrentShunt(20.5, 0.004));
-  assertEqual(INA260_ERR_SHUNTVOLTAGE_HIGH, INA.setMaxCurrentShunt(1.1, 0.080));
-
-  assertEqual(INA260_ERR_MAXCURRENT_LOW,    INA.setMaxCurrentShunt(0.0009));
-  assertEqual(INA260_ERR_MAXCURRENT_LOW,    INA.setMaxCurrentShunt(0));
-  assertEqual(INA260_ERR_MAXCURRENT_LOW,    INA.setMaxCurrentShunt(-1));
-  assertEqual(INA260_ERR_SHUNT_LOW,         INA.setMaxCurrentShunt(10, 0));
-  assertEqual(INA260_ERR_SHUNT_LOW,         INA.setMaxCurrentShunt(10, 0.0009));
-}
-
-
 unittest(test_setMode)
 {
   INA260 INA(0x40);

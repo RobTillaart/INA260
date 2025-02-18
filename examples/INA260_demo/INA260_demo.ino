@@ -2,7 +2,7 @@
 //    FILE: INA260_demo.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo
-//     URL: https://github.com/RobTillaart/INA226
+//     URL: https://github.com/RobTillaart/INA260
 
 
 #include "INA260.h"

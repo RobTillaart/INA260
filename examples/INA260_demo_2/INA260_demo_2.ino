@@ -1,22 +1,22 @@
 //
-//    FILE: INA226_demo_2.ino
+//    FILE: INA260_demo_2.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo
-//     URL: https://github.com/RobTillaart/INA226
+//     URL: https://github.com/RobTillaart/INA260
 
 
-#include "INA226.h"
+#include "INA260.h"
 
 
-INA226 INA(0x40);
+INA260 INA(0x40);
 
 
 void setup()
 {
   Serial.begin(115200);
   Serial.println(__FILE__);
-  Serial.print("INA226_LIB_VERSION: ");
-  Serial.println(INA226_LIB_VERSION);
+  Serial.print("INA260_LIB_VERSION: ");
+  Serial.println(INA260_LIB_VERSION);
 
   Wire.begin();
   if (!INA.begin() )
